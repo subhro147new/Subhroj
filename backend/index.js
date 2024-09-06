@@ -9,6 +9,10 @@ const Routes = require("./routes/route.js")
 const PORT = process.env.PORT || 5000
 
 dotenv.config();
+app.get('/', (req, res) => {
+    res.send('Hello, this is the backend!');
+  });
+  
 
 // app.use(bodyParser.json({ limit: '10mb', extended: true }))
 // app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }))
@@ -29,3 +33,4 @@ app.use('/', Routes);
 app.listen(PORT, () => {
     console.log(`Server started at port no. ${PORT}`)
 })
+  
