@@ -3,6 +3,11 @@ const cors = require("cors")
 const mongoose = require("mongoose")
 const dotenv = require("dotenv")
 // const bodyParser = require("body-parser")
+app.use(cors({
+    origin: 'https://school-frontend-9.onrender.com'
+  }));
+  
+
 const app = express()
 const Routes = require("./routes/route.js")
 
